@@ -1,0 +1,109 @@
+.App {
+  text-align: center;
+}
+/* .container{
+  background-image: url(./resonate_contact.jpg);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+} */
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.box {
+  background: linear-gradient(
+    45deg,
+    hsl(229, 94%, 46%) 30%,
+    hsl(229, 94%, 46%) 30%
+  );
+  border-radius: 5px;
+  color: white;
+  padding: 0px;
+  height: 175px;
+  width: 350px;
+  box-shadow: 0 3px 5px 2px rgba(255, 105, 135, 0.3);
+  text-align: center;
+  transition: 0.3s;
+  /* position: relative;
+  margin-left: auto;
+  margin-right: auto; */
+}
+.box:hover {
+  background: linear-gradient(
+    45deg,
+    hsl(229, 94%, 46%) 30%,
+    hsl(229, 94%, 46%) 30%
+  );
+  border-radius: 5px;
+  color: white;
+  height: 250px;
+  width: 250px;
+  box-shadow: 0 3px 5px 2px rgba(255, 105, 135, 0.3);
+}
+
+.img-box {
+  height: 190px;
+  width: 190px;
+  top: -80px;
+  object-fit: cover;
+  border-radius: 6px;
+  /* border: 1px solid black;  */
+  box-shadow: 0 3px 5px 2px rgba(255, 142, 164, 0.3);
+  position: relative;
+  background-color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prof-container {
+  margin: 10px;
+  width: fit-content;
+  padding-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.name {
+  margin-top: -55px;
+  font-size: 20px;
+  /* font-size: x-large; */
+  text-transform: uppercase;
+}
+.des {
+  margin-top: -50px;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
