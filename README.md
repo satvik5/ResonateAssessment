@@ -1,10 +1,10 @@
 # ResonateAssessment
 
-This repo includes my code solutions to Q1 and Q2.
+This repository includes my code solutions to Q1 and Q2.
 
 ## Q1 - Level 200
 
-You can access Q1 code clicking ResonateAssessment->level200. 'level200' includes 3 files -
+You can access Q1 code by clicking ResonateAssessment->level200. 'level200' includes 3 files -
 
 - script.js
 - index.html
@@ -13,8 +13,7 @@ You can access Q1 code clicking ResonateAssessment->level200. 'level200' include
 > :warning: **Make sure that you are currently at master branch**: Unfortunately,I couldn't merge main and master due to their different commit histories!
 
 You can also access my pen at https://codepen.io/satvik5/pen/poPLLEY?editors=0010 which is 'forked' from https://codepen.io/resonatetest/pen/qwGwqj
-To generate random code of 9 digits, I just use Random function of Math library,
-that generates no. from 1-999999999. From this, we had to retrieve following values -
+To generate random code of 9 digits, I used Random() function of Math library, that generates no. from 1-999999999. From this, we had to retrieve following values -
 
 - Store ID (Max 3 digits)
 - Transaction ID (Max 5 digits)
@@ -27,7 +26,7 @@ In short, 'generate' method generates random 9 digit code,creates variable that 
 provided as parameters and encrypt this variable with secret key as our already generated 9 digit code and then return this code.
 This secret variable is constructed with template strings with each info seperated by space. Below is the format of our secret variable
 
-> "${time_at_which_code_was_generated} ${store_id} ${transaction_id}";
+> "${date_on_which_code_was_generated} ${store_id} ${transaction_id}";
 
 We store our newly created encrypt object globally so that 'decode' method has access to it while decrypting.
 
