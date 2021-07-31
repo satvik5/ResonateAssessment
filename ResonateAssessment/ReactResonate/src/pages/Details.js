@@ -38,7 +38,10 @@ function Details() {
   }, []);
   return (
     <>
-      <NavBar />
+      <NavBar
+        text="GO BACK TO YOUR CONTACTS"
+        img="https://img.icons8.com/ios-filled/50/ffffff/long-arrow-left.png"
+      />
       <Card
         style={{
           width: "90%",

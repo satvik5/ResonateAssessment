@@ -39,7 +39,7 @@ function Contacts() {
 
   return (
     <>
-      <NavBar />
+      <NavBar text="YOUR CONTACT LIST" img="/people.svg" />
       <Container>
         <Row className="gy-4 py-4"></Row>
         <Row className="gy-6 py-5">
@@ -75,12 +75,6 @@ function Contacts() {
                     >
                       <div id="bigList">
                         {user.name}
-                        <span
-                          id="spanSpace"
-                          className="badge badge-pill badge-secondary"
-                        >
-                          CONNECTED
-                        </span>
                         <Button
                           variant="success"
                           size="sm"
@@ -88,7 +82,7 @@ function Contacts() {
                           className="button1"
                           onClick={goToDetails}
                         >
-                          USER INFO{" "}
+                          CONTACT INFO{" "}
                           <img src="https://img.icons8.com/small/24/ffffff/view-details.png" />{" "}
                         </Button>
                       </div>
