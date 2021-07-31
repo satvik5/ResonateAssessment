@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-//import App from "../App";
-//import ProfileUi from "react-profile-card";
 import ProfileUi from "../components/ProfileUI";
 import { useParams } from "react-router-dom";
 import { Card, CardColumns } from "react-bootstrap";
@@ -27,7 +25,6 @@ function Details() {
       method: "GET",
       url: "https://jsonplaceholder.typicode.com/users",
     });
-    //console.log(res.data[id-1].address);
     setObj(res.data[id_no - 1]);
     let dummy = [];
     dummy.push(res.data[id_no - 1]?.address?.geo?.lat);
@@ -44,13 +41,11 @@ function Details() {
       <NavBar />
       <Card
         style={{
-          width: "90rem",
+          width: "90%",
           margin: "auto",
           marginTop: "50px",
           justifyContent: "center",
         }}
-        // bg="info"
-        // className="cardBox"
         className="cardcustom"
         text="white"
       >
@@ -77,10 +72,11 @@ function Details() {
               {" "}
               <i>Address</i> -{" "}
               <b>
-                {street} {suite} {city}
+                {street}, {suite}, {city}, {zipcode}
               </b>{" "}
               <a
                 href={`https://www.google.com/maps/search/?api=1&query=${geo[0]}%2C${geo[1]}`}
+                target="_blank"
               >
                 <img src="https://img.icons8.com/pastel-glyph/20/ffffff/worldwide-location--v2.png" />{" "}
               </a>
@@ -88,12 +84,11 @@ function Details() {
             <div>
               {" "}
               <i>Phone</i> - <b>{userObj.phone}</b>{" "}
-              <a href="https://globfone.com/call-phone-online">
+              <a href="https://globfone.com/call-phone-online" target="_blank">
                 <img src="https://img.icons8.com/ios-filled/20/ffffff/phone.png" />{" "}
               </a>
             </div>
             <div>
-              {/* {" "} */}
               <i>Email</i> - <b>{userObj.email}</b>
               {"  "}
               <a href={`mailto:${userObj.email}`}>
@@ -104,11 +99,11 @@ function Details() {
               {" "}
               <i>Website</i> - <b>{userObj.website}</b>{" "}
               <a href={`https://${userObj.website}`} target="_blank">
+                {/* // eslint-disable-next-line jsx-a11y/alt-text */}
                 <img src="https://img.icons8.com/ios-glyphs/20/ffffff/link--v1.png" />{" "}
               </a>{" "}
             </div>
             <Button
-              // variant="success"
               size="sm"
               className="button2"
               onClick={(e) => {
@@ -130,8 +125,10 @@ function Details() {
             >
               {toggle ? "HIDE DETAILS" : "COMPANY DETAILS"}{" "}
               {!toggle ? (
+                // eslint-disable-next-line jsx-a11y/alt-text
                 <img src="https://img.icons8.com/ios/20/ffffff/circled-chevron-down.png" />
               ) : (
+                // eslint-disable-next-line jsx-a11y/alt-text
                 <img src="https://img.icons8.com/ios/20/ffffff/circled-chevron-up.png" />
               )}{" "}
             </Button>

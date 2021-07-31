@@ -9,7 +9,6 @@ function App() {
   document.title = "~ResonateContacts!~";
 
   return (
-    // <AuthProvider value={authDetails}>
     <Router>
       <Route exact path="/" component={Contacts} />
       <Route path="/details/:id" component={Details} />

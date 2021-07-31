@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import NavBar from "../components/NavBar";
-//import App from "../App";
 
 import {
   Container,
@@ -21,9 +20,6 @@ function Contacts() {
   const updateFilterText = (event) => {
     const new_ft = event.target.value;
     setFilter_text(new_ft);
-    //console.log(new_ft);
-
-    // re-filter and re-render jsx for list.
   };
 
   const goToDetails = (e) => {
@@ -38,14 +34,11 @@ function Contacts() {
       method: "GET",
       url: "https://jsonplaceholder.typicode.com/users",
     });
-    //console.log(res.data);
-    //let {data} = res
     setDataArr(res.data);
   }, []);
 
   return (
     <>
-      {/* <div> list of contacts</div> */}
       <NavBar />
       <Container>
         <Row className="gy-4 py-4"></Row>
@@ -57,14 +50,14 @@ function Contacts() {
         </Row>
         <Row xs={4} className="gy-4 py-4">
           <Col xs={4} bg="light">
-            <Form>
+            <Form className="form-inline">
               <FormControl
                 id="query_str"
-                placeholder="Type to filter names🔎"
+                placeholder="Type to filter names"
                 value={filter_text}
-                // onChange={event => setFilter_text(event.target.value) }
                 onChange={updateFilterText}
               />
+              <span>{"🔎"}</span>
             </Form>
           </Col>
           <Col xs={6}>
@@ -73,7 +66,6 @@ function Contacts() {
                 if (
                   user.name.toLowerCase().includes(filter_text.toLowerCase())
                 ) {
-                  // might need api call here to return all user data for selected user??
                   return (
                     <ListGroup.Item
                       key={index}
@@ -81,11 +73,11 @@ function Contacts() {
                       className="cardItem"
                       as="ul"
                     >
-                      <ul id="bigList">
+                      <div id="bigList">
                         {user.name}
                         <span
                           id="spanSpace"
-                          class="badge badge-pill badge-secondary"
+                          className="badge badge-pill badge-secondary"
                         >
                           CONNECTED
                         </span>
@@ -99,7 +91,7 @@ function Contacts() {
                           USER INFO{" "}
                           <img src="https://img.icons8.com/small/24/ffffff/view-details.png" />{" "}
                         </Button>
-                      </ul>
+                      </div>
                     </ListGroup.Item>
                   );
                 }
