@@ -12,7 +12,7 @@ You can access Q1 code clicking ResonateAssessment->level200. 'level200' include
 
 > :warning: **Make sure that you are currently at master branch**: Unfortunately,I couldn't merge main and master due to their commit histories!
 
-You can also access my pen at 'website' which is forked from 'website'
+You can also access my pen at https://codepen.io/satvik5/pen/poPLLEY?editors=0010 which is 'forked' from https://codepen.io/resonatetest/pen/qwGwqj
 To generate random code of 9 digits, I just use Random function of Math library,
 that generates no. from 1-999999999. From this, we had to retrieve following values -
 
