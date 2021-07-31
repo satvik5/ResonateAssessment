@@ -1,2 +1,3 @@
 # ResonateAssessment
-Code for Q1 and Q2 are included in level200 and my-app respectively
+This repo includes my code solutions to Q1 and Q2.
+You can access my code for Q1 
